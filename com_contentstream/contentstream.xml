@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component" version="3.8" method="upgrade">
+	<name>COM_CONTENTSTREAM</name>
+	<creationDate>2021-02-09</creationDate>
+	<author>NHS South, Central and West</author>
+	<authorEmail>webteam.scwcsu@nhs.net</authorEmail>
+	<authorUrl>https://www.scwcsu.nhs.uk</authorUrl>
+	<copyright>Copyright (C) 2021 NHS South Central and West. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>COM_CONTENTSTREAM_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Runs on install -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/mysql.sql</file>
+		</sql>
+	</install>
+
+	<!-- Runs on update -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Media files -->
+	<media folder="media/com_contentstream" destination="com_contentstream">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+
+	<!-- Front-end files -->
+	<files folder="components/com_contentstream">
+		<filename>contentstream.php</filename>
+		<filename>controller.php</filename>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="components/com_contentstream">
+		<language tag="en-GB">language/en-GB/en-GB.com_contentstream.ini</language>
+	</languages>
+
+	<!-- Back-end files -->
+	<administration>
+		<!-- Menu entries -->
+		<menu view="contentstream">COM_CONTENTSTREAM</menu>
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_contentstream">COM_CONTENTSTREAM</menu>
+		</submenu>
+
+		<!-- Core files -->
+		<files folder="administrator/components/com_contentstream">
+			<filename>contentstream.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>LICENSE.txt</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator/components/com_contentstream/language">
+        		<language tag="en-GB">en-GB/en-GB.com_contentstream.ini</language>
+                <language tag="en-GB">en-GB/en-GB.com_contentstream.sys.ini</language>
+		</languages>
+	</administration>
+
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" name="CONTENTSTREAM">https://www.example.com/contentstream.xml</server>
+	</updateservers>
+</extension>
+

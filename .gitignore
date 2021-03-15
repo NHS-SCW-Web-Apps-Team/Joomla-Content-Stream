@@ -1,0 +1,13 @@
+/build
+build.properties.dist
+build.xml
+phingREADME.md
+*.zip
+*.ps1
+.vscode\
+.vscode/
+/.vscode/
+\.vscode\
+/workspace
+workspace/
+/original
