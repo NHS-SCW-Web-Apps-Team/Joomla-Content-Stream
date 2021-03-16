@@ -9,5 +9,15 @@
 			   section="component">
 		</field>
 	</fieldset>
+	<fieldset name="options" label="COM_CONTENTSTREAM_OPTIONS" description="COM_CONTENTSTREAM_OPTIONS_DESC" >
+	<field 
+			name="docmanmenu" 
+			type="menuitem"  
+			label="COM_CONTENTSTREAM_OPTIONS_DOCMAN_MENU" 
+			description="COM_CONTENTSTREAM_OPTIONS_DOCMAN_MENU_DESC" 
+		>
+			<option	value="">JSELECT</option>
+		</field>	
+	</fieldset>			
 </config>
 

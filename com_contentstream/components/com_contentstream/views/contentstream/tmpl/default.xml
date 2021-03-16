@@ -5,4 +5,49 @@
 			<![CDATA[COM_CONTENTSTREAM_CONTENTSTREAM_DESC_MENU]]>
 		</message>
 	</layout>
+	<fields name="params" description="" addfieldpath="/administrator/components/com_content/models/fields">
+	<fieldset name="basic">
+			
+		<field 
+			name="pre_text_article_id" 
+			type="modal_article"
+			label="COM_CONTENTSTREAM_CONTENTSTREAM_PRE_ARTICLE_LABEL"
+			description="COM_CONTENTSTREAM_CONTENTSTREAM_PRE_ARTICLE_DESC"
+			required="false"
+			select="true"
+			new="true"
+			edit="true"
+			clear="true"
+			/>
+	
+		<field 
+			name="weblinkcategory" 
+			type="category" 
+			extension="com_weblinks" 
+			label="COM_CONTENTSTREAM_CONTENTSTREAM_WEBLINK_CATEGORY" 
+			description="COM_CONTENTSTREAM_CONTENTSTREAM_WEBLINK_CATEGORY_DESC" >
+			<option value="">Please select your option</option>
+		</field>
+		<field 
+			name="docmancategory" 
+			type="sql"  
+			label="COM_CONTENTSTREAM_CONTENTSTREAM_DOCMAN_CATEGORY" 
+			description="COM_CONTENTSTREAM_CONTENTSTREAM_WEBLINK_CATEGORY_DESC" 
+			query="select docman_category_id, title from #__docman_categories"   
+			key_field="docman_category_id"
+    		value_field="title" >
+			<option value="">JSELECT</option>
+		</field>
+		<field 
+			name="docmanmenu" 
+			type="menuitem" 
+			label="COM_CONTENTSTREAM_OPTIONS_DOCMAN_MENU" 
+			description="COM_CONTENTSTREAM_CONTENTSTREAM_DOCMAN_MENU_DESC" >
+			<option	value="">JDEFAULT</option>
+		</field>
+
+	
+	</fieldset>
+
+	</fields>
 </metadata>

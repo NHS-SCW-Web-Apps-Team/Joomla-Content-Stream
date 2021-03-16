@@ -44,9 +44,9 @@
 		<folder>models</folder>
 		<folder>views</folder>
 	</files>
-	<languages folder="components/com_contentstream">
+	<!--<languages folder="components/com_contentstream">
 		<language tag="en-GB">language/en-GB/en-GB.com_contentstream.ini</language>
-	</languages>
+	</languages>-->
 
 	<!-- Back-end files -->
 	<administration>
@@ -75,10 +75,10 @@
 			<folder>tables</folder>
 			<folder>views</folder>
 		</files>
-		<languages folder="administrator/components/com_contentstream/language">
+		<!--<languages folder="administrator/components/com_contentstream/language">
         		<language tag="en-GB">en-GB/en-GB.com_contentstream.ini</language>
                 <language tag="en-GB">en-GB/en-GB.com_contentstream.sys.ini</language>
-		</languages>
+		</languages>-->
 	</administration>
 
 	<!-- Update servers -->
