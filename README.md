@@ -23,3 +23,7 @@ for child menu items
 to add descriptions and tags you can add Json like below to the notes field 
 if your menu item has a Params for "tags" or "itemdesc" component will use those . 
 {"description":"test note", "tags":["dataset"]}
+
+Example Output from Content Stream
+
+![image](https://user-images.githubusercontent.com/9959732/192988637-f8b8dcd2-1d84-4d29-8241-15f912c3a0e6.png)
